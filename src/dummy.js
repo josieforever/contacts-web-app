@@ -1,24 +1,4 @@
-<template>
-  <section id="app">
-    <PhoneHeader :number="contacts.length" ></PhoneHeader>
-    <AddNewContact  @addcontact="addContact"></AddNewContact>
-    <div id="phone-body-container">
-      <PhoneBody v-for="contact in contacts" :key="contact.id" :id="contact.id" :name="contact.name" :username="contact.username" :phone="contact.phone" :email="contact.email" :isCLicked="false"></PhoneBody> 
-    </div>
-  </section>
-</template>
-
-<script>
-import PhoneHeader from './components/PhoneHeader.vue'
-import PhoneBody from './components/PhoneBody.vue'
-import AddNewContact from './components/AddNewContact.vue'
-
-export default {
-  name: 'App',
-  components: {PhoneHeader, PhoneBody, AddNewContact},
-  data() {
-    return {
-      contacts:[
+[
     {
         "id": 1,
         "name": "Leanne Graham",
@@ -34,7 +14,7 @@ export default {
                 "lng": "81.1496"
             }
         },
-        "phone": "1-770-736-8031",
+        "phone": "1-770-736-8031 x56442",
         "website": "hildegard.org",
         "company": {
             "name": "Romaguera-Crona",
@@ -57,7 +37,7 @@ export default {
                 "lng": "-34.4618"
             }
         },
-        "phone": "1-010-692-9125",
+        "phone": "010-692-6593 x09125",
         "website": "anastasia.net",
         "company": {
             "name": "Deckow-Crist",
@@ -103,7 +83,7 @@ export default {
                 "lng": "-164.2990"
             }
         },
-        "phone": "1-170-9623 x156",
+        "phone": "493-170-9623 x156",
         "website": "kale.biz",
         "company": {
             "name": "Robel-Corkery",
@@ -126,7 +106,7 @@ export default {
                 "lng": "62.5342"
             }
         },
-        "phone": "1-254-954-1289",
+        "phone": "(254)954-1289",
         "website": "demarco.info",
         "company": {
             "name": "Keebler LLC",
@@ -149,7 +129,7 @@ export default {
                 "lng": "71.7478"
             }
         },
-        "phone": "1-477-935-8478",
+        "phone": "1-477-935-8478 x6430",
         "website": "ola.org",
         "company": {
             "name": "Considine-Lockman",
@@ -172,7 +152,7 @@ export default {
                 "lng": "21.8984"
             }
         },
-        "phone": "1-210-067-6132",
+        "phone": "210.067.6132",
         "website": "elvis.io",
         "company": {
             "name": "Johns Group",
@@ -195,7 +175,7 @@ export default {
                 "lng": "-120.7677"
             }
         },
-        "phone": "1-586-493-6943",
+        "phone": "586.493.6943 x140",
         "website": "jacynthe.com",
         "company": {
             "name": "Abernathy Group",
@@ -218,7 +198,7 @@ export default {
                 "lng": "-168.8889"
             }
         },
-        "phone": "1-775-976-6794",
+        "phone": "(775)976-6794 x41206",
         "website": "conrad.com",
         "company": {
             "name": "Yost and Sons",
@@ -241,7 +221,7 @@ export default {
                 "lng": "57.2232"
             }
         },
-        "phone": "1-024-648-3804",
+        "phone": "024-648-3804",
         "website": "ambrose.net",
         "company": {
             "name": "Hoeger LLC",
@@ -249,68 +229,4 @@ export default {
             "bs": "target end-to-end models"
         }
     }
-        ]
-    }
-  },
-  methods: {
-    addContact(name, username, phone, email) {
-        const newContact = {
-            id: new Date().toISOString(),
-            name: name,
-            username: username,
-            phone: phone,
-            email: email
-        }
-        
-        this.contacts.push(newContact)
-    }
-  }
-
-  /* created() {
-    async function fetchData() {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users/')
-      const data = await response.json()  
-      return data
-    }
-     this.contacts = fetchData()
-     console.log(this.contacts)
-  } */
-}
-</script>
-
-<style>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-#app {
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#phone-body-container {
-  min-height: 90vh;
-  width: 500px;
-  background-color: black;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-
-}
-
-
-
-
-
-</style>
+]
